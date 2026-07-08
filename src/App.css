@@ -1,4 +1,54 @@
-body {
-  margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
+.background{
+    position:fixed;
+    inset:0;
+    z-index:-1;
+}
+
+.container{
+    position:relative;
+    z-index:2;
+}
+
+.hero{
+    backdrop-filter: blur(10px);
+    background:rgba(15,23,42,.65);
+}
+
+.card{
+    backdrop-filter: blur(8px);
+    background:rgba(255,255,255,.08);
+    border:1px solid rgba(255,255,255,.15);
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 15px 40px rgba(0,0,0,.4);
+}
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+    gap:25px;
+}
+
+.buttons{
+    margin-top:30px;
+    display:flex;
+    justify-content:center;
+    gap:20px;
+}
+
+.buttons a{
+    padding:12px 24px;
+    border-radius:30px;
+    text-decoration:none;
+    background:#2563eb;
+    color:white;
+    transition:.3s;
+}
+
+.buttons a:hover{
+    background:#1d4ed8;
+    transform:scale(1.05);
 }
