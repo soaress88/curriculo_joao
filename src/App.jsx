@@ -1,5 +1,6 @@
-import "./App.css";
+﻿import "./App.css";
 import Beams from "./components/Beams";
+import perfil from "./assets/perfil.jpeg";
 
 function App() {
   return (
@@ -12,10 +13,12 @@ function App() {
       <div className="container">
         <header className="hero">
           <img
-            src="https://i.pravatar.cc/200"
-            alt="Foto de João Soares"
+            src={perfil}
+            alt="Foto de Afonso"
             className="foto"
           />
+            
+          
 
           <h1>João Soares</h1>
 
