@@ -52,6 +52,9 @@ function Home() {
             <Link to="/calculadora">
                 Calculadora
             </Link>
+                        <Link to="/jogodogalo">
+                Jogo do Galo
+            </Link>
         </div>
 
         

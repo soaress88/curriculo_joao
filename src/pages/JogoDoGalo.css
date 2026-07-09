@@ -1,0 +1,91 @@
+.jogo-container {
+  max-width: 700px;
+  margin: 50px auto;
+  text-align: center;
+  color: white;
+}
+
+.jogo-container h1 {
+  font-size: 60px;
+  margin-bottom: 10px;
+}
+
+.jogo-container h2 {
+  margin-bottom: 30px;
+  color: #60a5fa;
+}
+
+.tabuleiro {
+  display: grid;
+  grid-template-columns: repeat(3, 120px);
+  gap: 12px;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.casa {
+  width: 120px;
+  height: 120px;
+  border: none;
+  border-radius: 15px;
+  background: rgba(255,255,255,0.08);
+  color: white;
+  font-size: 55px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: .25s;
+}
+
+.casa:hover {
+  background: rgba(255,255,255,.15);
+  transform: scale(1.05);
+}
+
+.vencedora {
+  background: #22c55e;
+  color: white;
+  animation: vencedor .7s infinite;
+}
+
+@keyframes vencedor {
+
+  0%{
+    transform:scale(1);
+  }
+
+  50%{
+    transform:scale(1.08);
+  }
+
+  100%{
+    transform:scale(1);
+  }
+
+}
+
+.novo-jogo {
+  padding: 14px 30px;
+  border: none;
+  border-radius: 12px;
+  font-size: 18px;
+  cursor: pointer;
+  background: #3b82f6;
+  color: white;
+  transition: .3s;
+  margin-bottom:20px;
+}
+
+.novo-jogo:hover {
+  background:#2563eb;
+  transform:translateY(-2px);
+}
+
+.jogo-container a{
+  color:#60a5fa;
+  text-decoration:none;
+  font-size:18px;
+}
+
+.jogo-container a:hover{
+  color:white;
+}
