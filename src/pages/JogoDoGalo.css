@@ -15,6 +15,39 @@
   color: #60a5fa;
 }
 
+/* ---------- Pontuação ---------- */
+
+.pontuacao {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+}
+
+.caixa-pontos {
+  width: 120px;
+  padding: 15px;
+  border-radius: 15px;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.caixa-pontos h3 {
+  margin: 0;
+  font-size: 20px;
+}
+
+.caixa-pontos span {
+  display: block;
+  margin-top: 10px;
+  font-size: 36px;
+  font-weight: bold;
+}
+
+/* ---------- Tabuleiro ---------- */
+
 .tabuleiro {
   display: grid;
   grid-template-columns: repeat(3, 120px);
@@ -28,64 +61,108 @@
   height: 120px;
   border: none;
   border-radius: 15px;
-  background: rgba(255,255,255,0.08);
+  background: rgba(255, 255, 255, 0.08);
   color: white;
   font-size: 55px;
   font-weight: bold;
   cursor: pointer;
-  transition: .25s;
+  transition: 0.25s;
 }
 
 .casa:hover {
-  background: rgba(255,255,255,.15);
+  background: rgba(255, 255, 255, 0.15);
   transform: scale(1.05);
 }
+
+/* ---------- Casas vencedoras ---------- */
 
 .vencedora {
   background: #22c55e;
   color: white;
-  animation: vencedor .7s infinite;
+  animation: vencedor 0.8s infinite;
 }
 
 @keyframes vencedor {
-
-  0%{
-    transform:scale(1);
+  0% {
+    transform: scale(1);
   }
 
-  50%{
-    transform:scale(1.08);
+  50% {
+    transform: scale(1.08);
   }
 
-  100%{
-    transform:scale(1);
+  100% {
+    transform: scale(1);
   }
+}
 
+/* ---------- Botões ---------- */
+
+.novo-jogo,
+.reiniciar {
+  padding: 14px 28px;
+  border: none;
+  border-radius: 12px;
+  font-size: 17px;
+  cursor: pointer;
+  color: white;
+  transition: 0.3s;
+  margin: 8px;
 }
 
 .novo-jogo {
-  padding: 14px 30px;
-  border: none;
-  border-radius: 12px;
-  font-size: 18px;
-  cursor: pointer;
   background: #3b82f6;
-  color: white;
-  transition: .3s;
-  margin-bottom:20px;
 }
 
 .novo-jogo:hover {
-  background:#2563eb;
-  transform:translateY(-2px);
+  background: #2563eb;
+  transform: translateY(-2px);
 }
 
-.jogo-container a{
-  color:#60a5fa;
-  text-decoration:none;
-  font-size:18px;
+.reiniciar {
+  background: #ef4444;
 }
 
-.jogo-container a:hover{
-  color:white;
+.reiniciar:hover {
+  background: #dc2626;
+  transform: translateY(-2px);
+}
+
+/* ---------- Link ---------- */
+
+.jogo-container a {
+  color: #60a5fa;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.jogo-container a:hover {
+  color: white;
+}
+
+/* ---------- Responsivo ---------- */
+
+@media (max-width: 600px) {
+  .tabuleiro {
+    grid-template-columns: repeat(3, 90px);
+    gap: 10px;
+  }
+
+  .casa {
+    width: 90px;
+    height: 90px;
+    font-size: 42px;
+  }
+
+  .jogo-container h1 {
+    font-size: 42px;
+  }
+
+  .pontuacao {
+    gap: 10px;
+  }
+
+  .caixa-pontos {
+    width: 100px;
+  }
 }
